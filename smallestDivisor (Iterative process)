@@ -1,0 +1,18 @@
+const smallestDivisor = (num) => {
+  let currentDiv = 2;
+  if (num === 0) {
+    return Infinity;
+  } if (num === 1) {
+    return 1;
+  }
+  const tempIter = (so) => {
+    if (num % so === 0) {
+      return so;
+    } else {
+      currentDiv += 1;
+      return (tempIter(currentDiv));
+    }
+  }
+  return tempIter(currentDiv);
+
+};
