@@ -1,0 +1,6 @@
+const isPrime = (number) => {
+  if (number <= 1) return false;
+  for (let counter = 2; counter <= (number / 2); counter += 1) {
+    if (number % counter === 0) return false;
+  } return true;
+};
