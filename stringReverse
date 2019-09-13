@@ -1,0 +1,11 @@
+const reverse = (str) => {
+  let index = str.length - 1;
+  let result = '';
+
+  while (index >= 0) {
+    result += str[i];
+    index -= 1;
+  }
+
+  return result;
+};
