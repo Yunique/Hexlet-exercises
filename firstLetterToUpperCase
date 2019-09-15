@@ -1,0 +1,16 @@
+// This program turns first letter of every word in the string to upper case.
+
+const firstLetterToUpperCase = (str) => {
+  let newString = '';
+  newString += str[0].toUpperCase();
+  let index = 1;
+  while (index < str.length) {
+    let currentDigit = str[index];
+    if ((str[index].toLowerCase() === str[index]) && (str[index - 1] === (' '))) {
+      currentDigit = str[index].toUpperCase();
+    }
+    newString += currentDigit;
+    index += 1;
+  }
+  return newString;
+};
