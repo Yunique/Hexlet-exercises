@@ -1,0 +1,16 @@
+// This program checks if the number is perfect.
+
+const isPerfect = (num) => {
+  let divisor = 1;
+  let result = 0;
+  if (num < 6) return false;
+  while (divisor < num) {
+    if (num % divisor === 0) {
+      result += divisor;
+    } divisor += 1;
+  }
+  if (result === num) {
+    return true;
+  }
+  return false;
+};
