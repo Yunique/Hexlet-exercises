@@ -1,0 +1,17 @@
+// This program returns your number in a reverse order of digits.
+
+const reverseInt = (num) => {
+  const string = num.toString();
+  let newString = '';
+  let index = string.length - 1;
+  for (index; index >= 0 ; index -= 1) {
+    newString += string[index];
+  } 
+  if (newString[newString.length - 1] === '-') {
+    let newStr = '';
+    newStr += newString.slice(0, newString.length - 1);
+    newStr = Number(newStr);
+    newStr *= -1;
+    return newStr;
+  } newString = Number(newString);
+  return newString;
