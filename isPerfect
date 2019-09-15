@@ -4,7 +4,7 @@ const isPerfect = (num) => {
   let divisor = 1;
   let result = 0;
   if (num < 6) return false;
-  while (divisor < num) {
+  while (divisor <= (num / 2)) {
     if (num % divisor === 0) {
       result += divisor;
     } divisor += 1;
