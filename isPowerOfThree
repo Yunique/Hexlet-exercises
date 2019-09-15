@@ -1,11 +1,9 @@
 // This program checks if number is power of 3.
 
 const isPowerOfThree = (num) => {
-  console.log(num);
   if (num === 1) return true;
   if (num % 3 !== 0) return false;
   if (num < 3) return false;
-  if ((num / 3) === 1) {return true}
-  else {return isPowerOfThree (num / 3)}
-
-  return false;
+  if ((num / 3) === 1) return true;
+  return isPowerOfThree(num / 3)
+};
