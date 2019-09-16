@@ -1,0 +1,9 @@
+// This program inverts case of every symbol in string.
+
+const invertCase = (string) => {
+  let result = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === string[i].toUpperCase()) result += string[i].toLowerCase();
+    else if (string[i] === string[i].toLowerCase()) result += string[i].toUpperCase();
+  } return result;
+};
