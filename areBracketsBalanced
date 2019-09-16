@@ -3,10 +3,10 @@
 const areBracketsBalanced = (string) => {
   let balance = 0;
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '(') balance +=1;
-    if (string[index] === ')') balance -=1;
+    if (string[index] === '(') balance += 1;
+    if (string[index] === ')') balance -= 1;
     if (balance < 0) return false;
   }
   if (balance === 0) return true;
-  else return false;
+  return false;
 };
