@@ -1,0 +1,10 @@
+// This program converts number of minutes to the "HH:MM" form. 
+
+const formattedTime = (time) => {
+  let result = '';
+  if (time / 60 < 10) result += '0' + (Math.floor(time / 60));
+  else result += (Math.floor(time / 60));
+  if (time % 60 < 10) result += ':0' + (time % 60);
+  else result += ':' + (time % 60);
+  return result;
+};
