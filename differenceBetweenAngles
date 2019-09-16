@@ -1,0 +1,8 @@
+// This program find the lowest difference between two angles.
+
+const diff = (angle1, angle2) => {
+  const biggestNum = Math.max(angle1, angle2);
+  const lowestNum = Math.min(angle1, angle2);
+  if ((360 - biggestNum + lowestNum) >= (biggestNum - lowestNum)) return (biggestNum - lowestNum);
+  return (360 - biggestNum + lowestNum);
+};
