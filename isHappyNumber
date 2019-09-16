@@ -1,0 +1,20 @@
+// This program checks if number is "Happy"
+
+const sumOfSquareDigits = (num) => {
+  const numAsStr = String(num);
+  let sum = 0;
+  for (let i = 0; i < numAsStr.length; i += 1) {
+    const digit = Number(numAsStr[i]);
+    sum += digit * digit;
+  }
+
+  return sum;
+};
+
+const isHappyNumber = (num) => {
+  let acc = num;
+  for (let index = 0; index <= 10; index += 1) {
+    if (sumOfSquareDigits(acc) === 1) return true;
+    acc = sumOfSquareDigits(acc);
+  } return false;
+};
