@@ -1,0 +1,15 @@
+// This program checks if sum of the left half of the number is equal to the sum of the right half.
+
+const isHappy = (string) => {
+  let count1 = 0;
+  let count2 = 0;
+  if ((string.length % 2) !== 0) return false;
+  for (let index = 0; index < string.length / 2; index += 1) {
+    count1 += Number(string[index]);
+  }
+  for (let index2 = string.length / 2; index2 < string.length; index2 += 1) {
+    count2 += Number(string[index2]);
+  }
+  if (count1 === count2) return true;
+  return false;
+};
